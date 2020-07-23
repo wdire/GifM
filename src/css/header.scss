@@ -1,0 +1,161 @@
+#header{
+    position: absolute;
+    left:50%;
+    top:15px;
+    transform: translateX(-50%);
+    max-width: 90%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 140px;
+}
+
+.searchBox{
+    position: relative;
+    max-width:100%;
+}
+
+#searchValue{
+    border:none;
+    background-color: $searchValueBgColor;
+    color:inherit;
+    font-size:18px;
+    width:$searchValueWidth;
+    max-width:100%;
+    height:$searchValueHeight;
+    padding:0;
+    padding-left: $searchValuePaddingLeft;
+    outline: none;
+    padding-right:$searchValuePaddingRight;
+    margin-bottom:10px;
+
+    &:focus{
+        box-shadow: 0 2px 3px -1px darken($searchValueBgColor, 10%);
+    }
+
+}
+
+#searchBtn{
+    border:none;
+    outline:none;
+    background:none;
+    position: absolute;
+    top:0;
+    right:0;
+    width:$searchValueHeight;
+    height:$searchValueHeight;
+    cursor: pointer;
+
+    i{
+        font-size:22px;
+        color:#fff;
+    }
+}
+
+.categories{
+    display: flex;
+    justify-content: left;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-x:auto;
+}
+
+.categories-item{
+    font-size:14px;
+    cursor: pointer;
+    user-select: none;
+    border-bottom:2px solid #fff;
+    padding:3px;
+    margin:0 3px;
+}
+
+$pageBtnSize:34px;
+$pageBtnMargin:0 5px;
+$paginationMarginTop:20px;
+
+.pagination{
+    display: flex;
+    margin-top:$paginationMarginTop;
+    .num-page{
+        cursor: pointer;
+        text-align: center;
+        border:1px solid #fff;
+        width:$pageBtnSize;
+        height:$pageBtnSize;
+        line-height: $pageBtnSize;
+        margin:$pageBtnMargin;
+
+        &.active{
+            color:$bgColor;
+            background-color: #fff!important;
+        }
+
+        &:hover{
+            background-color: rgba(255,255,255,0.24);
+        }
+
+    }
+
+}
+
+
+.giphyLogo{
+    width:150px;
+    position: absolute;
+    left:0px;
+    top:6px;
+}
+
+$authorColor:darken(#fff, $amount: 20%);
+
+.author{
+    position: absolute;
+    top:0px;
+    right:0;
+    width:40px;
+    height:30px;
+    cursor: pointer;
+    //border: 1px solid white;
+
+    div:nth-child(1){
+        top:11px;
+        left:0;
+        width:32px;
+    }
+    
+    div:nth-child(2){
+        top:16px;
+        left:4px;
+        width:24px;
+    }
+
+    div{
+        position: absolute;
+        border-radius:3px;
+        background:$authorColor;
+        height:2px;
+        transition: left 0.3s;
+    }
+
+    &:hover div{
+        left:24px;
+    }
+
+    &:hover:before{
+        opacity: 1;
+        right:15px;
+    }
+
+    &:before{
+        opacity: 0;
+        content: "BY RAMAZAN ÖZTURK";
+        position: absolute;
+        width:160px;
+        right:40px;
+        top: 6px;
+        font-size:14px;
+        color:$authorColor;
+        transition: opacity 0.3s, right 0.45s;
+    }
+}

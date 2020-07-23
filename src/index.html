@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gif'M, Search Gifs that contains fun, happiness, enjoy and when you needed sad gifs.">
+    <meta property="og:title" content="Gif'M - Search Gifs">
+    <meta property="og:description" content="Gif'M, Search Gifs that contains fun, happiness, enjoy and when you needed sad gifs.">
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Gif'M - Search Gifs</title>
+</head>
+<body>
+    <div class="container">
+        <div id="gifs">
+            <div id="header">
+                <div class="searchBox">
+                    <input type="text" id="searchValue" placeholder="Search..">
+                    <button id="searchBtn"><i class="las la-search"></i></button>
+                </div>
+                <div class="categories">
+                    <div class="categories-item" id="get-trending">Trending</div>
+                    <div class="categories-item search" data-query="reactions">Reactions</div>
+                    <div class="categories-item search" data-query="entertainment">Entertainment</div>
+                    <div class="categories-item search" data-query="cat">Cat</div>
+                    <div class="categories-item search" data-query="anime">Anime</div>
+                    <div class="categories-item search" data-query="memes">Memes</div>
+                </div>
+                <div class="pagination">
+                    
+                </div>
+            </div>
+            <div class="gif" style="width:200px;height:200px"></div>
+        </div>
+    </div>
+    <div class="giphyLogo">
+        <img src="media/PoweredBy_200px-Black_HorizText.png" alt="Powered By Giphy">
+    </div>
+    <div class="author">
+        <div></div>
+        <div></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
